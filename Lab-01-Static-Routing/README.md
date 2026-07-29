@@ -8,7 +8,7 @@ Configure static routing between two different LANs connected using two Cisco ro
 
 ## Network Topology
 
-![Topology](topology.png)
+![Network Topology](Topology.png)
 
 ---
 
