@@ -11,7 +11,7 @@ This repository contains hands-on networking projects completed while learning C
 | Lab | Topic | Status |
 |------|-------|--------|
 | Lab 01 | Static Routing | ✅ Completed |
-| Lab 02 | RIP Routing | 🔜 Coming Soon |
+| Lab 02 | RIP Routing | ✅ Completed |
 | Lab 03 | OSPF Routing | 🔜 Coming Soon |
 | Lab 04 | VLAN Configuration | 🔜 Coming Soon |
 | Lab 05 | Inter-VLAN Routing | 🔜 Coming Soon |
