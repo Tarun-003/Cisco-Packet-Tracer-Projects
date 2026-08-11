@@ -1,48 +1,69 @@
-# 🔀 RIP Routing – Three-Router Network
+# 📌 Lab 02 - RIP Routing
 
-A Cisco Packet Tracer networking project demonstrating how to configure and implement **RIPv2 (Routing Information Protocol)** to enable communication between three different LAN networks through three interconnected routers.
+## Objective
+
+Configure dynamic routing using RIPv2 between three different LANs connected using three Cisco routers.
 
 ---
 
-## 📌 Project Overview
+## Network Topology
 
-This project contains three LANs connected through three Cisco routers in a triangular topology.
+![RIP Routing Topology](Topology.png)
 
-Each router connects:
+---
 
-- One local LAN
-- Two neighboring routers
+## Devices Used
 
-RIPv2 is configured on all three routers to dynamically exchange routing information and learn remote networks.
+- 3 Cisco Routers
+- 3 Cisco Switches
+- 6 PCs
 
-### Network Topology
+---
+
+## IP Addressing
+
+### LAN 10
+
+| Device  | IP Address     | Default Gateway |
+|---------|----------------|-----------------|
+| Router2 | 192.168.10.254 | -               |
+| PC4     | 192.168.10.1   | 192.168.10.254  |
+| PC5     | 192.168.10.2   | 192.168.10.254  |
+
+---
+
+### LAN 20
+
+| Device  | IP Address     | Default Gateway |
+|---------|----------------|-----------------|
+| Router0 | 192.168.20.254 | -               |
+| PC0     | 192.168.20.1   | 192.168.20.254  |
+| PC1     | 192.168.20.2   | 192.168.20.254  |
+
+---
+
+### LAN 30
+
+| Device  | IP Address     | Default Gateway |
+|---------|----------------|-----------------|
+| Router1 | 192.168.30.254 | -               |
+| PC2     | 192.168.30.1   | 192.168.30.254  |
+| PC3     | 192.168.30.2   | 192.168.30.254  |
+
+---
+
+### Router-to-Router Links
+
+| Connection | Router  | Interface | IP Address |
+|------------|---------|-----------|------------|
+| R0 ↔ R2    | Router0 | Serial1/0 | 172.16.0.1 |
+| R0 ↔ R2    | Router2 | Serial1/0 | 172.16.0.2 |
+| R0 ↔ R1    | Router0 | Serial1/1 | 172.17.0.1 |
+| R0 ↔ R1    | Router1 | Serial1/1 | 172.17.0.2 |
+| R2 ↔ R1    | Router2 | Serial1/1 | 172.18.0.1 |
+| R2 ↔ R1    | Router1 | Serial1/0 | 172.18.0.2 |
+
+**Subnet Mask**
 
 ```text
-                         ┌─────────────────────┐
-                         │       LAN 10        │
-                         │  192.168.10.0/24    │
-                         │                     │
-                         │   PC4     PC5       │
-                         └──────────┬──────────┘
-                                    │
-                             192.168.10.254
-                                    │
-                                   R2
-                              /           \
-                             /             \
-                    172.16.0.2           172.18.0.1
-                         /                   \
-                        /                     \
-                 172.16.0.1               172.18.0.2
-                      R0──────────────────────R1
-                         172.17.0.1    172.17.0.2
-                             │             │
-                      192.168.20.254   192.168.30.254
-                             │             │
-                    ┌────────┴───┐     ┌───┴────────┐
-                    │   LAN 20   │     │   LAN 30   │
-                    │192.168.20.0│     │192.168.30.0│
-                    │    /24     │     │    /24     │
-                    │            │     │            │
-                    │ PC0   PC1  │     │ PC2   PC3  │
-                    └────────────┘     └────────────┘
+255.255.0.0
