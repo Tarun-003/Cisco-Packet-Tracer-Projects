@@ -8,7 +8,7 @@ Configure dynamic routing using OSPF between six LANs connected using six Cisco 
 
 ## Network Topology
 
-![OSPF Network Topology]{Topology.png)
+![OSPF Network Topology](Topology.png)
 
 ---
 
