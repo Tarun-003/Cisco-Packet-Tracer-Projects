@@ -14,7 +14,7 @@ This repository contains hands-on networking projects completed while learning C
 | Lab 02 | RIP Routing | ✅ Completed |
 | Lab 03 | OSPF Routing |  ✅ Completed  |
 | Lab 04 | VLAN Configuration |  ✅ Completed |
-| Lab 05 | Inter-VLAN Routing | 🔜 Coming Soon |
+| Lab 05 | Inter-VLAN Routing | ✅ Completed |
 | Lab 06 | DHCP | 🔜 Coming Soon |
 | Lab 07 | ACL | 🔜 Coming Soon |
 | Lab 08 | NAT | 🔜 Coming Soon |
